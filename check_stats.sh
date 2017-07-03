@@ -91,8 +91,7 @@ BAT_GAUGE_HEX=$(i2cget -y -f 0 0x34 0xb9) # Read AXP209 register B9H
 BAT_GAUGE_DEC=$(($BAT_GAUGE_HEX))  # Convert hex to Dec
 
   # Output readings in row format
-  echo " "$POWER_STATUS " " $BAT_EXIST "  " $BAT_VOLT"mV   " $BAT_IDISCHG"mA    " $BAT_ICHG"mA     "$BAT_GAUGE_DEC"%   "$TEMP_
-C"c  "$(date)
+  echo " "$POWER_STATUS " " $BAT_EXIST "  " $BAT_VOLT"mV   " $BAT_IDISCHG"mA    " $BAT_ICHG"mA     "$BAT_GAUGE_DEC"%   "$TEMP_C"c  "$(date)
 
   # Increment counter and sleep a while
   x=$(( $x + 1 ))
